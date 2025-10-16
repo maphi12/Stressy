@@ -55,11 +55,6 @@ for feature in numeric_features:
     plt.title(f"{feature} Distribution")
     plt.show()
 
-# Optional: explore relationships
-# sns.pairplot(df, hue="Stress Levels", vars=numeric_features)
-# plt.show()
-
-# --- Correlation Heatmap ---
 plt.figure(figsize=(10,6))
 sns.heatmap(file.corr(), annot=True, cmap="coolwarm", fmt=".2f")
 plt.title("Feature Correlation Heatmap")
@@ -71,3 +66,4 @@ print(f"- Dataset has {len(numeric_features)} numerical features + stress labels
 print("- Stress labels may be imbalanced; check counts above.")
 print("- Features show variability across stress levels; check distributions above.")
 print("- Correlated features should be considered for preprocessing.")
+
